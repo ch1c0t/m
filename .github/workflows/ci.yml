@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-and-spec:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+      - uses: crystal-lang/install-crystal@v1
+        with:
+          crystal: 1.22.0
+      - run: bundle install
+      - run: shards install
+      - run: bundle exec rake
+      - run: bundle exec rspec

@@ -1,1 +1,1 @@
-puts "m is made with Crystal."
+exit M.run_cli(ARGV)

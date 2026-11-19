@@ -1,1 +1,14 @@
-m is a CLI made with Crystal.
+m is a Crystal CLI.
+
+Mitamae recipe commands:
+  execute-mitamae-recipe       Fuzzy-select and execute a recipe with fzf.
+  execute-mitamae-recipe-at    Execute a recipe, recipe directory, or .list file.
+  list-mitamae-recipes         Print all paths offered by the recipe picker.
+
+Recipes are read from ~/recipes for root. For other users, ~/user.recipes
+is preferred when it exists; otherwise ~/recipes is used.
+
+Recipe execution uses:
+  mitamae local --node-yaml ~/.config/recipes/node.yml PATH
+
+The picker requires fzf. Recipe execution requires mitamae.
