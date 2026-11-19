@@ -1,0 +1,9 @@
+---
+name: m
+version: 0.0.0
+authors:
+- Anatoly Chernov <chertoly@gmail.com>
+targets:
+  m:
+    main: src/bin/m.cr
+crystal: ">= 1.20.3"
